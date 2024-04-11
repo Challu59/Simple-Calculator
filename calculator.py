@@ -1,6 +1,8 @@
 from tkinter import *
 
+# Root window
 root = Tk()
+# Title for the window
 root.title("Calculator")
 
 # Creating function to enter number
@@ -13,7 +15,7 @@ def button_click(number):
 def clear():
     entry.delete(0,END)
 
-# Function to get first number and assign it globally
+# Function to get first number for addition
 def add():
     first_num = entry.get()
     global num1
@@ -22,6 +24,7 @@ def add():
     num1 = int(first_num)
     clear()
 
+# Function to get first number for subtraction
 def difference():
     first_num = entry.get()
     global num1
@@ -30,6 +33,7 @@ def difference():
     num1 = int(first_num)
     clear()
 
+# Function to get first number for multiplication
 def multiply():
     first_num = entry.get()
     global num1
@@ -38,6 +42,7 @@ def multiply():
     num1 = int(first_num)
     clear()
 
+# Function to get first number for division
 def divide():
     first_num = entry.get()
     global num1
@@ -46,6 +51,7 @@ def divide():
     num1 = int(first_num)
     clear()
 
+# Function to calculate the result based on the desired operation
 def equals():
     second_num = entry.get()
     global num2
@@ -58,7 +64,7 @@ def equals():
     elif operation == "mul":
         entry.insert(0, num1 * num2)
     elif operation == "div":
-        entry.insert(0, num1 / num2)
+        entry.insert(0, int(num1 / num2))
     
 # Data entry box
 entry = Entry(root, width=30, borderwidth=5, )
