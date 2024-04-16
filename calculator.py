@@ -20,7 +20,7 @@ def add():
     first_num = entry.get()
     global num1
     global operation
-    opaeration = "add"
+    operation = "add"
     num1 = int(first_num)
     clear()
 
